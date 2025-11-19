@@ -1,0 +1,197 @@
+/*
+    COMENTARIOS EN CÓDIGO: Declaración inicial del modelo de caja.
+    Asegura que padding y border se incluyan *dentro* del ancho/alto
+    de un elemento, simplificando el diseño.
+*/
+* {
+    box-sizing: border-box; /* Modelo de Caja: Uso de box-sizing */
+    margin: 0;
+    padding: 0;
+}
+
+/* Selector de Elemento: body, html */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Selector de Clase: .container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden; /* Limpia flotantes si los hubiera */
+}
+
+/* Estilos de header */
+.main-header {
+    background: #4B3832; /* Café oscuro */
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    
+}
+
+/* Estilos de navegación (nav) */
+nav {
+    background: #9B7653; /* Café más claro */
+    /* Aseguramos que ocupe todo el ancho */
+    width: 100%; 
+    /* Propiedad CLAVE: Mantiene la barra en la parte superior al hacer scroll */
+    position: sticky; 
+    top: 0; 
+    /* Aseguramos que esté sobre el resto del contenido al hacer scroll */
+    z-index: 1000; 
+}
+
+/* Selector Descendiente: nav ul */
+nav ul {
+    list-style: none;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Selector Descendiente: nav ul li */
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+/* Selector de Pseudo-Clase: a:hover */
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px;
+}
+nav ul li a:hover {
+    background-color: #795548; /* Oscurece al pasar el ratón */
+    border-radius: 5px;
+}
+
+/* Selector de ID: #titulo-principal */
+#titulo-principal {
+    margin-bottom: 5px;
+    color: #FFD700; /* Dorado para destacar */
+}
+
+/* COMENTARIOS EN CÓDIGO: Modelo de Caja avanzado para secciones
+    Demostración de border, padding, margin y layout (grid) 
+*/
+.section-box {
+    /* Modelo de Caja: Padding interno */
+    padding: 30px;
+    /* Modelo de Caja: Margen externo */
+    margin: 20px 0;
+    background: #fff;
+    /* Modelo de Caja: Borde */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+/* Layout Sencillo: Uso de Grid para la sección del menú */
+.layout-grid {
+    display: grid;
+    /* 2 columnas iguales para las listas */
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 30px;
+}
+.full-width {
+    /* Asegura que la tabla ocupe todo el ancho en el layout-grid */
+    grid-column: 1 / -1; 
+}
+
+/* Estilos de imágenes */
+.responsive-img {
+    /* Modelo de Caja: ancho/alto y ajustes de display */
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 15px 0;
+    border-radius: 4px;
+}
+
+/* Estilos de tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+table th, table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+/* Selector de Clase para fila de promoción */
+.promo-row {
+    background-color: #f9f9e9;
+    font-weight: bold;
+}
+
+/* Estilos del formulario (form) */
+#contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#contact-form input[type="text"],
+#contact-form input[type="email"],
+#contact-form select,
+#contact-form textarea {
+    /* Modelo de Caja: ancho/alto */
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    /* Modelo de Caja: Asegura que el padding esté dentro del ancho 100% */
+    box-sizing: border-box; 
+}
+
+/* Selector de Clase para botón de envío y pseudo-clase */
+.submit-button {
+    background-color: #A0522D; /* Siena */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.submit-button:hover {
+    background-color: #8B4513; /* Oscurece al pasar el ratón */
+}
+
+/* Estilos de footer */
+.main-footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 20px;
+}
+.main-footer a {
+    color: #FFD700;
+}
+/* Estilos específicos para la lista del horario */
+#horario ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 15px;
+}
+
+#horario li {
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-left: 5px solid #A0522D; /* Un pequeño acento de color */
+}
+
+
+
+
+
+
